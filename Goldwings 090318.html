@@ -1,0 +1,1538 @@
+﻿<!DOCTYPE html>
+
+<html>
+<div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+    <base href=".">
+    <title>Goldwings</title>
+    <link rel="stylesheet" type="text/css" href="./Goldwings/style.css">
+    <link rel="stylesheet" type="text/css" href="./Goldwings/site.css">
+    <link rel="stylesheet" href="./Goldwings/animate.css">
+    <link rel="stylesheet" href="./Goldwings/sitewow.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+        hr {
+            border: 0;
+            margin: 1.35em auto;
+            max-width: 100%;
+            background-position: 50%;
+            box-sizing: border-box;
+        }
+
+        .accessory {
+            height: 6px;
+            background-image: radial-gradient( closest-side,
+            hsla(0, 0%, 50%, 1.0),
+            hsla(0, 0%, 50%, 0) 100%);
+            position: relative;
+        }
+
+        .accessory:after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            background-color: hsl(0, 0%, 75%);
+            height: 12px;
+            width: 12px;
+            transform: rotate(45deg);
+            margin-top: -10px;
+            margin-left: -10px;
+            border-radius: 4px 0;
+            border: 4px solid hsla(0, 0%, 100%, 0.35);
+            background-clip: padding-box;
+            box-shadow: -10px 10px 0 hsla(0, 0%, 100%, 0.15), 10px -10px 0 hsla(0, 0%, 100%, 0.15);
+        }
+
+        /* .image-wrapper {
+  
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+            position: relative;
+ 
+     
+        } */
+
+        .justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+
+
+        .footercolor {
+            color: rgba(255, 255, 255, .4);
+        }
+
+        .footercolor:hover {
+            color: rgba(255, 255, 255, .4);
+        }
+
+        /*
+border : black | background : transparent | color : black
+-----------------------HOVER---------------------
+border : black | background : blue        | color : white
+ */
+
+        .button-base-bwb {
+            display: inline-flex;
+            height: 40px;
+            width: 150px;
+            border: 2px solid #1f1f1f;
+            margin: 20px 20px 20px 20px;
+            color: #1f1f1f;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: .8em;
+            letter-spacing: 1.5px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        #button-bwb {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #button-bwb a {
+            color: #1f1f1f;
+            text-decoration: none;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all .35s ease-Out;
+        }
+
+        #slide-bbw {
+            width: 100%;
+            height: 100%;
+            left: -200px;
+            background: #337ab7;
+            color: white;
+            position: absolute;
+            transition: all .35s ease-Out;
+            bottom: 0;
+        }
+
+        #button-bwb:hover a {
+            color: white;
+        }
+
+
+        #button-bwb:hover #slide-bbw {
+            left: 0;
+        }
+
+        /*
+border : white | background : transparent | color : white
+-----------------------HOVER---------------------
+border : white | background : blue        | color : white
+ */
+
+        .button-base-wtw {
+            display: inline-flex;
+            height: 40px;
+            width: 150px;
+            border: 2px solid white;
+            margin: 20px 20px 20px 20px;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: .8em;
+            letter-spacing: 1.5px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        #button-wtw {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #button-wtw a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all .35s ease-Out;
+        }
+
+        #slide-wbw {
+            width: 100%;
+            height: 100%;
+            left: -200px;
+            background: #337ab7;
+            color: white;
+            position: absolute;
+            transition: all .35s ease-Out;
+            bottom: 0;
+        }
+
+        #button-wtw:hover a {
+            color: white;
+        }
+
+
+        #button-wtw:hover #slide-wbw {
+            left: 0;
+        }
+
+
+
+
+
+
+
+
+
+
+        .carousel-showmanymoveone .carousel-control {
+            width: 4%;
+            background-image: none;
+        }
+
+        .carousel-showmanymoveone .carousel-control.left {
+            margin-left: 15px;
+        }
+
+        .carousel-showmanymoveone .carousel-control.right {
+            margin-right: 15px;
+        }
+
+        .carousel-showmanymoveone .cloneditem-1,
+        .carousel-showmanymoveone .cloneditem-2,
+        .carousel-showmanymoveone .cloneditem-3 {
+            display: none;
+        }
+
+        @media all and (min-width: 768px) {
+
+            .carousel-showmanymoveone .carousel-inner>.active.left,
+            .carousel-showmanymoveone .carousel-inner>.prev {
+                left: -50%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.active.right,
+            .carousel-showmanymoveone .carousel-inner>.next {
+                left: 50%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.left,
+            .carousel-showmanymoveone .carousel-inner>.prev.right,
+            .carousel-showmanymoveone .carousel-inner>.active {
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+                display: block;
+            }
+        }
+
+        @media all and (min-width: 768px) and (transform-3d),
+        all and (min-width: 768px) and (-webkit-transform-3d) {
+
+            .carousel-showmanymoveone .carousel-inner>.item.active.right,
+            .carousel-showmanymoveone .carousel-inner>.item.next {
+                -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.item.active.left,
+            .carousel-showmanymoveone .carousel-inner>.item.prev {
+                -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.item.left,
+            .carousel-showmanymoveone .carousel-inner>.item.prev.right,
+            .carousel-showmanymoveone .carousel-inner>.item.active {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                left: 0;
+            }
+        }
+
+        @media all and (min-width: 992px) {
+
+            .carousel-showmanymoveone .carousel-inner>.active.left,
+            .carousel-showmanymoveone .carousel-inner>.prev {
+                left: -25%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.active.right,
+            .carousel-showmanymoveone .carousel-inner>.next {
+                left: 25%;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.left,
+            .carousel-showmanymoveone .carousel-inner>.prev.right,
+            .carousel-showmanymoveone .carousel-inner>.active {
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+            .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+                display: block;
+            }
+        }
+
+        @media all and (min-width: 992px) and (transform-3d),
+        all and (min-width: 992px) and (-webkit-transform-3d) {
+
+            .carousel-showmanymoveone .carousel-inner>.item.active.right,
+            .carousel-showmanymoveone .carousel-inner>.item.next {
+                -webkit-transform: translate3d(25%, 0, 0);
+                transform: translate3d(25%, 0, 0);
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.item.active.left,
+            .carousel-showmanymoveone .carousel-inner>.item.prev {
+                -webkit-transform: translate3d(-25%, 0, 0);
+                transform: translate3d(-25%, 0, 0);
+                left: 0;
+            }
+
+            .carousel-showmanymoveone .carousel-inner>.item.left,
+            .carousel-showmanymoveone .carousel-inner>.item.prev.right,
+            .carousel-showmanymoveone .carousel-inner>.item.active {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                left: 0;
+            }
+        }
+
+
+
+
+        .button-nav {
+            transition: all 0.5s ease-in-out;
+            background: white;
+            color: black;
+            width: 9em;
+            height: 3em;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+            cursor: pointer;
+            line-height: 3em;
+            text-align: center;
+            font-size: 1em;
+            margin-top: 15px;
+
+            border-radius: 5px;
+
+            /*border-radius: 10px;*/
+        }
+
+        .button-nav .line {
+            transition: all 1s ease-in-out;
+            position: absolute;
+            width: 0%;
+            height: 0.2em;
+            background: #99121e;
+            top: 2.8em;
+            overflow: hidden;
+            left: -1px;
+            display: block;
+            z-index: 10;
+        }
+
+        .button-nav:after {
+            transition: all 1s ease-in-out;
+            background-color: #e3192a;
+            color: #fff;
+            height: 100%;
+            width: 100%;
+
+            position: absolute;
+            margin: auto;
+            line-height: 3em;
+            text-align: center;
+            top: 110%;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+            left: 0px;
+        }
+
+
+
+
+
+
+
+
+        .button-nav-trans:after {
+            content: "";
+            transition: all 0.2s ease-in-out;
+            background: #e3192a;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            margin: auto;
+            line-height: 3em;
+            text-align: center;
+            top: 110%;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+            left: 0px;
+            z-index: -9999;
+        }
+
+        .button-nav:hover:after {
+            top: 0px;
+        }
+
+        .button-nav:hover .line,
+        .button-nav:focus .line {
+            width: 100%;
+            background: #99121e;
+        }
+
+
+
+
+        li:hover .button-nav-trans {
+            cursor: pointer;
+            color: #fff;
+            background: #e3192a;
+            text-align: center;
+
+
+        }
+
+
+
+        ul li ul {
+            --Example: 1326px;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: -2.5rem;
+
+            display: none;
+            left: 0;
+        }
+
+        ul li:hover>ul,
+        ul li ul:hover {
+
+            position: absolute;
+            width: 100%;
+            float: left;
+            background-color: white;
+            visibility: visible;
+            opacity: 1;
+            display: block;
+
+
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+
+        }
+
+        .sliderbasic {
+            height: 100%;
+        }
+    </style>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <![endif]-->
+    <!-- End of Squarespace Headers -->
+</head>
+<link rel="stylesheet" href="./Goldwings/bts.css">
+<link rel="stylesheet" href="./Goldwings/imagehover.css">
+<script src="./Goldwings/jquerymin.js">
+</script>
+<script src="./Goldwings/jquerybts.js">
+</script>
+
+<body id="collection-5a5c2c7df9619a9a190df640" class="transparent-header enable-nav-button nav-button-style-outline nav-button-corner-style-square banner-button-style-outline banner-button-corner-style-square banner-slideshow-controls-arrows meta-priority-category center-entry-title--meta hide-list-entry-footer hide-blog-sidebar center-navigation--info event-thumbnails event-thumbnail-size-32-standard event-date-label event-date-label-time event-list-show-cats event-list-date event-list-time event-list-address event-icalgcal-links event-excerpts event-item-back-link gallery-design-grid aspect-ratio-auto lightbox-style-light gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square show-product-price show-product-item-nav product-social-sharing newsletter-style-dark opentable-style-light small-button-style-solid small-button-shape-square medium-button-style-outline medium-button-shape-square large-button-style-outline large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-5a5c2c7df9619a9a190df640 collection-type-index collection-layout-default homepage view-list mobile-style-available has-banner-image index-page">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="IMAGES/Logos/goldwings1logo.png" alt="Goldwings" class="img img-responsive" style="">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" style="padding-right: 5px;">
+
+                    <!-- <li class="active" ><a class="button-nav button-nav-home ">
+                        HOME</a>
+                        <div class="line"></div>
+                    </li>
+                    <li ><a class="button-nav button-nav-aboutus">
+                        ABOUT US</a>
+                        <div class="line"></div>
+                    </li>
+              <li class="dropdown">
+          <a href="#" class="dropdown-toggle button-nav button-nav-products" data-toggle="dropdown" >PRODUCTS ▼</a>
+          <ul class="dropdown-menu">
+        
+            <li><a href="#"><img src="IMAGES\Logos\plain_adventurer.png" style="max-height:50px;"><i class="fa fa-caret-right pull-right" style="font-size:50px;"></i></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"><img src="IMAGES\Logos\plain_livinbox.png" style="max-height:50px;"><i class="fa fa-caret-right pull-right" style="font-size:50px;"></i></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"><img src="IMAGES\Logos\plain_tombow.png" style="max-height:50px;"><i class="fa fa-caret-right pull-right" style="font-size:50px;"></i></a></li>
+          </ul>
+        </li>
+           
+                    <li ><a class="button-nav button-nav-services">
+                        SERVICES</a>
+                        <div class="line"></div>
+                    </li>
+                    <li ><a class="button-nav button-nav-news">
+                        NEWS</a>
+                        <div class="line"></div>
+                    </li>
+                    <li ><a class="button-nav button-nav-contactus">
+                        CONTACT US</a>
+                        <div class="line"></div>
+                    </li> -->
+
+                    <li style="margin-left:2px;margin-right:2px;" class="active">
+                        <a class="button-nav button-nav-trans">HOME
+                            <div class="line"></div>
+                        </a>
+
+                    </li>
+                    <li style="margin-left:2px;margin-right:2px;">
+                        <a class="button-nav button-nav-trans">ABOUT US
+                            <div class="line"></div>
+                        </a>
+
+                    </li>
+                    <li style="margin-left:2px;margin-right:2px;">
+                        <a class="button-nav button-nav-trans product">BRANDS ▼
+                            <div class="line"></div>
+                        </a>
+
+                        <ul class="dropdown" style="border:2px solid #e3192a;">
+                            <div style="background-color: #e3192a;"></div>
+                            <li style="margin-left:2px;margin-right:2px;">
+                                <a style="padding-left:10px;" href="#">
+                                    <center>
+                                        <img src="IMAGES/Logos/plain_adventurer.png" style="max-height:40px; "> </center>
+                                </a>
+                            </li>
+                            <li style="margin-left:2px;margin-right:2px;">
+                                <a style="padding-left:10px;" href="#">
+                                    <center>
+                                        <img src="IMAGES/Logos/plain_livinbox.png" style="max-height:40px; "> </center>
+                                </a>
+                            </li>
+                            <li style="margin-left:2px;margin-right:2px;">
+                                <a style="padding-left:10px;" href="#">
+                                    <center>
+                                        <img src="IMAGES/Logos/plain_tombow.png" style="max-height:40px; "> </center>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li style="margin-left:2px;margin-right:2px;">
+                        <a class="button-nav button-nav-trans">
+                            SERVICES
+                            <div class="line"></div>
+                        </a>
+
+                    </li>
+                    <li style="margin-left:2px;margin-right:2px;">
+                        <a class="button-nav button-nav-trans">
+                            NEWS
+                            <div class="line"></div>
+                        </a>
+
+                    </li>
+                    <li style="margin-left:2px;margin-right:2px;">
+                        <a class="button-nav button-nav-trans">
+                            CONTACT US
+                            <div class="line"></div>
+                        </a>
+
+                    </li>
+
+
+
+
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <main id="page" role="main">
+        <!--
+            -->
+        <!--
+            -->
+        <div id="content" class="main-content" data-content-field="main-content" data-collection-id="5a5c2c7df9619a9a190df640" style="position: relative;margin-top:70px;">
+            <!-- Create index sections -->
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="image-wrapper">
+                            <img src="IMAGES/Final Banner/banner ad_01.png" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="image-wrapper">
+                            <img src="IMAGES/Final Banner/banner ad_02.png" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="image-wrapper">
+                            <img src="IMAGES/Final Banner/banner ad_03.png" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="image-wrapper">
+                            <img src="IMAGES/Final Banner/banner ad_04.png" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="image-wrapper">
+                            <img src="IMAGES/Final Banner/banner ad_05.png" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="image-wrapper">
+                            <img src="IMAGES/Final Banner/banner ad_06.png" style="width:100%;">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="opacity:0;">
+                    <span class="fa fa-arrow-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next" style="opacity:0;">
+                    <span class="fa fa-arrow-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <script type="text/javascript">
+            $('#myCarousel').carousel({
+                interval: 6000
+            })
+        </script>
+
+
+        <div id="Goldwings" class="container margindivgoldwings">
+
+            <div class="row ">
+                <div class="col-md-6 wow bounceInLeft" data-wow-duration="1s" data-wow-delay="2">
+
+                    <p class="goldwingstitle">
+                        <strong>Goldwings Stationery Products, Inc.</strong>
+                    </p>
+                    <br>
+                    <p class="goldwingsdesc justify"> Is one of the most reputable
+                         and trusted school and office supplies company in the Philippines. We market our products 
+                         nationwide with our own sales force and distribution networks. We are proud of our history
+                         of industry leadership. We are committed to delivering exceptional value to our customers
+                         by providing high quality and branded school and office supplies.
+                        </span>
+                        <br>
+                        <br> We are proud to have played an important role in shaping the school and office supplies
+                        industry for more than 
+                        <span class="font-size-23" style="color:#e3192a">
+                            <strong>30 years, and we look forward to continuing our tradition for years to come. </strong>
+                        </span>
+                    </p>
+
+
+
+
+                    <center>
+                        <div class="button-base-bwb" id="button-bwb">
+                            <div id="slide-bbw"></div>
+                            <a href="#">
+                                <strong> Know More </strong>
+                                <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-md-6 wow fadeIn" data-wow-duration="2s">
+                    <img src="IMAGES/30years.png" class="img img-responsive" style="float:  right; width:70%;height:  70%;">
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+        <div id="Adventurer" style=" background-color:#e3192a" class="wow fadeIn margindiv" data-wow-duration="2s">
+
+
+            <div style="padding:2%;">
+                <div class=" row">
+                    <div class="col-md-6 " style="padding:0px 10px;position: relative;height:700px;">
+                        <div class="col-md-12">
+                            <center>
+                                <img src="IMAGES/Adventurer/Adventurer Primary/01copy.jpg" class="img img-responsive" style="max-height:700px;min-height:700px;">
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding:0px 10px; position: relative;height:700px;">
+
+                        <div class="col-md-12" style=" position: relative;height:700px;">
+                            <div class=" brandSeparation-1">
+                                <center>
+                                    <img src="IMAGES/Logos/adventurer_logo.png" class="logobrand2">
+                                </center>
+                            </div>
+
+                            <div class=" brandSeparation-2">
+
+                                <p class="goldwingsdesc white justify">&nbsp;&nbsp;&nbsp;Adventurer School and Office has long met the market’s demand for well-made,
+                                durable school and office supplies in the country. Fine craftsmanship combined with ingenious yet simple designs define the functional
+                                characteristics that have become the brand's distinguishing qualities ever 
+                                    <span class="font-size-23">
+                                        <strong> since 1983. </strong>
+                                    </span>
+
+                                </p>
+
+                                <center>
+                                    <div class="button-base-wtw" id="button-wtw">
+                                        <div id="slide-wbw"></div>
+                                        <a href="#">
+                                            <strong> Know More </strong>
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </div>
+                                </center>
+                            </div>
+
+                            <div class=" brandSeparation-3">
+                                <div class="col-xs-12">
+                                    <div class="carousel carousel-showmanymoveone slide" id="carousel3slot1">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Adventurer/Adventurer Slider/slider-01.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Adventurer/Adventurer Slider/slider-02.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Adventurer/Adventurer Slider/slider-03.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Adventurer/Adventurer Slider/slider-04.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Adventurer/Adventurer Slider/slider-05.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Adventurer/Adventurer Slider/slider-03.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#carousel3slot1" data-slide="prev" style="opacity:0;">
+                                        <i class="fa fa-arrow-left"></i>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel3slot1" data-slide="next" style="opacity:0;">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--    </div> -->
+            </div>
+
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div id="livinbox" style=" background-color:white" class="wow fadeIn margindiv" data-wow-duration="2s">
+
+            <div style="padding:2%;">
+                <div class=" row">
+                    <div class="col-md-6 " style="padding:0px 10px;position: relative;height:700px;">
+                        <div class="col-md-12">
+                            <center>
+                                <img src="IMAGES/Livinbox/Livinbox Primary/DDH copy.jpg" class="img img-responsive" style="max-height:700px;min-height:700px;">
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-md-6 " style="padding:0px 10px;position: relative;height:700px;">
+                        <div class="col-md-12" style=" position: relative;height:700px;">
+                            <div class=" brandSeparation-1">
+                                <center>
+                                    <img src="IMAGES/Logos/plain_livinbox.png" class="logobrand2">
+                                </center>
+                            </div>
+
+                            <div class=" brandSeparation-2">
+                                <p class="goldwingsdesc justify ">&nbsp;&nbsp;&nbsp;Stationery and household.Lorem ipsum dolor sit amet,
+                                    <span class="font-size-23">
+                                        <strong> consectetur adipisicing elit </strong>
+                                    </span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur.
+                                </p>
+                                <center>
+                                    <div class="button-base-bwb" id="button-bwb">
+                                        <div id="slide-bbw"></div>
+                                        <a href="#">
+                                            <strong> Know More </strong>
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </div>
+                                </center>
+                            </div>
+
+                            <div class=" brandSeparation-3">
+                                <div class="col-xs-12">
+                                    <div class="carousel carousel-showmanymoveone slide" id="carousel3slot2" style="background-color: white">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Livinbox/Livinbox Slider/livinbox slider-01.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Livinbox/Livinbox Slider/livinbox slider-02.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Livinbox/Livinbox Slider/livinbox slider-03.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Livinbox/Livinbox Slider/livinbox slider-04.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Livinbox/Livinbox Slider/livinbox slider-05.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Livinbox/Livinbox Slider/livinbox slider-06.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#carousel3slot2" data-slide="prev" style="opacity:0;">
+                                        <i class="fa fa-arrow-left"></i>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel3slot2" data-slide="next" style="opacity:0;">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+        <div id="Tombow" style=" background-color:#f5f5f6" class="wow fadeIn margindiv" data-wow-duration="2s">
+
+
+            <div style="padding:2%;">
+                <div class=" row">
+
+                    <div class="col-md-6" style="padding:0px 10px;position: relative;height:700px;">
+                        <div class="col-md-12">
+                            <center>
+                                <img src="IMAGES/Tombow/Tombow Primary/01.png" class="img img-responsive" style="max-height:700px;min-height:700px;">
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-md-6 " style="padding:0px 10px;position: relative;height:700px;">
+                        <div class="col-md-12" style=" position: relative;height:700px;">
+                            <div class=" brandSeparation-1">
+                                <center>
+                                    <img src="IMAGES/Logos/plain_tombow.png" class="logobrand2">
+                                </center>
+                            </div>
+                            <div class=" brandSeparation-2">
+
+                                <p class="goldwingsdesc justify">&nbsp;&nbsp;&nbsp;Tombow was established in Japan in 1913. It offers a wide range of pens,
+                                correction tapes, brush pens and other stationery for everyone’s creative needs. Tombow has a strong presence in the U.S. and in
+                                Europe and its brand has become synonymous to 
+                                    <span class="font-size-23">
+                                        <strong> “superior quality”.</strong>
+                                    </span>
+                                </p>
+                                <center>
+                                    <div class="button-base-bwb" id="button-bwb">
+                                        <div id="slide-bbw"></div>
+                                        <a href="#">
+                                            <strong> Know More </strong>
+                                            <i class="fa fa-chevron-circle-right"></i>
+                                        </a>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class=" brandSeparation-3">
+                                <div class="col-xs-12">
+
+                                    <div class="carousel carousel-showmanymoveone slide" id="carousel3slot3" style="background-color: white">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Tombow/Tombow Slider/tombow slider-01.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Tombow/Tombow Slider/tombow slider-02.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Tombow/Tombow Slider/tombow slider-03.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Tombow/Tombow Slider/tombow slider-04.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Tombow/Tombow Slider/tombow slider-05.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="col-xs-12 col-sm-12 col-md-4">
+                                                    <a href="#">
+                                                        <img src="IMAGES/Tombow/Tombow Slider/tombow slider-06.png" class="img-responsive sliderbasic">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#carousel3slot3" data-slide="prev" style="opacity:0;">
+                                        <i class="fa fa-arrow-left"></i>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel3slot3" data-slide="next" style="opacity:0;">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="news" style="  background-color:#1f1f1f; padding: 3% 0px; " class="wow fadeIn" data-wow-duration="2s">
+            <div class="col-md-12 ">
+                <center>
+                    <center>
+
+                        <h1 style="font-family:'Roboto';color: white">NEWS</h1>
+
+                    </center>
+                    <br>
+            </div>
+
+
+            <div id="carnews" class="carousel slide " data-ride="carousel" style="padding:0px 20px;">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-7" style="padding:0px 20px;">
+                                <center>
+                                    <img src="Images/News/01.jpg" class=" slidernews">
+                                </center>
+                            </div>
+
+                            <div class="col-md-5">
+
+                                <div class="card">
+                                    <h5 class="card-header newssizetitle white">
+                                        <strong> Jodi Sta. Maria and Thirdy Endorse Adventurer School and Office Products in 2017
+                                            Campaign
+                                        </strong>
+                                    </h5>
+                                    <br>
+                                    <div class="card-body">
+                                        <p class="card-text newssizedesc white justify">Jodi and Thirdy will spearhead the 2017
+                                            <span class="font-size-23">
+                                                <strong>“Let’s Get Organized”</strong>
+                                            </span>
+                                            campaign, which will be launched starting January. The official signing of their contract took place recently. In attendance
+                                            were the representatives of Goldwings Stationery Products, Inc.Lorem ipsum dolor
+                                            sit amet, consectetur adipisicing elit.</p>
+                                        <center>
+                                            <div class="button-base-wtw" id="button-wtw">
+                                                <div id="slide-wbw"></div>
+                                                <a href="#">
+                                                    <strong> Know More </strong>
+                                                    <i class="fa fa-chevron-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="row">
+                            <div class="col-md-7" style="padding:0px 20px;">
+                                <center>
+                                    <img src="Images/News/02.jpg" class=" slidernews">
+                                </center>
+                            </div>
+
+                            <div class="col-md-5">
+
+                                <div class="card">
+                                    <h5 class="card-header newssizetitle white">
+                                        <strong>Turn Your Zipper Bag into a Multi-Purpose Wall Organizer</strong>
+                                    </h5>
+                                    <br>
+                                    <div class="card-body">
+                                        <h5 class="card-text newssizedesc white">Adventurer Zipper Bags will surely come in handy when you need an easily accessible
+                                            container for holiday purchase receipts, billings, etc. What’s more,
+                                            <span class="font-size-23">
+                                                <strong>you can stylize them to fit your taste or room’s interior design</strong>
+                                            </span>
+                                            .Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam. </h5>
+                                        <center>
+                                            <div class="button-base-wtw" id="button-wtw">
+                                                <div id="slide-wbw"></div>
+                                                <a href="#">
+                                                    <strong> Know More </strong>
+                                                    <i class="fa fa-chevron-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="row">
+                            <div class="col-md-7 " style="padding:0px 20px;">
+                                <center>
+                                    <img src="Images/News/03.jpg" class=" slidernews">
+                                </center>
+                            </div>
+
+                            <div class="col-md-5">
+
+                                <div class="card">
+                                    <h5 class="card-header newssizetitle white">
+                                        <strong>How to Make Your Customized Memo Pad Using Scratch Paper</strong>
+                                    </h5>
+                                    <br>
+                                    <div class="card-body">
+                                        <h5 class="card-text newssizedesc white">With a little creativity and the use of common crafting or art materials, you can
+                                            easily transform a pile of used paper into a functional memo pad.
+                                            <span class="font-size-23">
+                                                <strong> Make one for yourself or your loved ones in a jiffy</strong>
+                                            </span>.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </h5>
+                                        <center>
+                                            <div class="button-base-wtw" id="button-wtw">
+                                                <div id="slide-wbw"></div>
+                                                <a href="#">
+                                                    <strong> Know More </strong>
+                                                    <i class="fa fa-chevron-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $('#carnews').carousel({
+                        interval: 6000
+                    })
+                </script>
+
+
+            </div>
+
+        </div>
+
+        <!-- end -->
+        </div>
+        </div>
+        <div id="Gallery" class="container" style=" padding:5% 0% ">
+        
+            <center>
+                <span style="font-family:'Roboto';color:#e3192a;letter-spacing: 0.5vw;font-size: 24px;">
+                    <strong>FOLLOW US IN INSTAGRAM</strong>
+                </span>
+            </center>
+            <br>
+            <br>
+        
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="https://www.instagram.com/adventurer_ph/" style="Text-Decoration: None !important; ">
+                        <img src="IMAGES/Instagram/adventurer logo.png" style="width: 80px;">
+                    </a>
+                </div>
+                <div class="col-md-11">
+                    <a href="https://www.instagram.com/adventurer_ph/" style=" Text-Decoration: None !important; ">
+                        <span style="font-family:'Roboto';color:#303030;font-size: 20px;line-height: 80px">
+                            <strong> #Adventurer_PH</strong>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div id="instaFeedAdventurer"> </div>
+        
+            </div>
+        
+        
+            <br>
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="https://www.instagram.com/tombowph/" style=" Text-Decoration: None !important; ">
+                        <img src="IMAGES/Instagram/Tombow logo.png" style="width: 80px;">
+                    </a>
+                </div>
+                <div class="col-md-11">
+                    <a href="https://www.instagram.com/tombowph/" style="Text-Decoration: None !important; ">
+                        <span style="font-family:'Roboto';color:#303030;font-size: 20px;line-height: 80px">
+                            <strong> #TombowPH</strong>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        
+        
+            <br>
+            <div class="row">
+                <div id="instaFeedTombow"> </div>
+        
+            </div>
+        
+        
+        </div>
+
+        <br><br>
+    </main>
+    <div id="preFooter" class="unscrolled">
+        <div class="pre-footer-inner">
+            <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Pre-Footer Content" data-type="block-field" data-updated-on="1516844534124"
+                id="preFooterBlocks">
+                <div class="row sqs-row">
+                    <div class="col sqs-col-12 span-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1456895791287"
+                id="footerBlocks">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <center style="width: 90%;border-bottom: 2px solid rgba(255,255,255,.4);padding: 15px;">
+                            <a class="footercolor" style="max-height:50px;">HOME
+                                <i class="fa fa-caret-right pull-right" style="font-size:24px;"></i>
+                            </a>
+                        </center>
+
+
+                        <center style="width: 90%;border-bottom: 2px solid rgba(255,255,255,.4);padding: 15px;">
+                            <a class="footercolor" style="max-height:50px;">ABOUT US
+                                <i class="fa fa-caret-right pull-right" style="font-size:24px;"></i>
+                            </a>
+                        </center>
+                        <center style="width: 90%;border-bottom: 2px solid rgba(255,255,255,.4);padding: 15px;">
+                            <a class="footercolor" style="max-height:50px;">SERVICES
+                                <i class="fa fa-caret-right pull-right" style="font-size:24px;"></i>
+                            </a>
+                        </center>
+                        <center style="width: 90%;border-bottom: 2px solid rgba(255,255,255,.4);padding: 15px;">
+                            <a class="footercolor" style="max-height:50px;">NEWS
+                                <i class="fa fa-caret-right pull-right" style="font-size:24px;"></i>
+                            </a>
+                        </center>
+                        <center style="width: 90%;padding: 15px;">
+                            <a class="footercolor" style="max-height:50px;">CONTACT US
+                                <i class="fa fa-caret-right pull-right" style="font-size:24px;"></i>
+                            </a>
+                        </center>
+
+                    </div>
+
+
+
+
+
+                    <div class="col-md-3">
+                        <center style="width: 90%;padding: 15px;border-bottom: 2px solid rgba(255,255,255,.4);">
+                            <a class="footercolor" style="max-height:50px;">
+                                ADVENTURER
+                            </a>
+                        </center>
+
+                        <br>
+                        <ul style="list-style-type:none;">
+
+                            <li>
+                                <a class="footercolor" href="#">Binders</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Cardholders</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Certificate Holders</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Clipboards</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Cut-Size Plastic Covers</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">File Cases</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Pencil Cases</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Plastic Envelopes</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Plastic Jackets</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Zipper Bags</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3">
+                        <center style="width: 90%;padding: 15px;border-bottom: 2px solid rgba(255,255,255,.4);">
+                            <a class="footercolor" style="max-height:50px;">
+                                LIVINBOX
+                            </a>
+                        </center>
+                        <br>
+                        <ul style="list-style-type:none">
+
+                            <li>
+                                <a class="footercolor" href="#">Desktop Staionery Organizer</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Document Trays</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Filing Cabinets</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Folding Baskets</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Multi Purpose Carry Boxes</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Pen Holders</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Plastic File Cases</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Small Parts Organizers</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <center style="width: 90%;padding: 15px;border-bottom: 2px solid rgba(255,255,255,.4);">
+                            <a class="footercolor" style="max-height:50px;">
+                                TOMBOW
+                            </a>
+                        </center>
+
+                        <br>
+                        <ul style="list-style-type:none">
+
+                            <li>
+                                <a class="footercolor" href="#">Correction Tapes</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Design Pens</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Marking Pens</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Specialty Pens</a>
+                            </li>
+                            <li>
+                                <a class="footercolor" href="#">Refills</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <br>
+                <div style="width: 100%;border-bottom: 2px solid rgba(255,255,255,.4);"></div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <center>
+                            <a class="footercolor" href="#">Adventurer PH
+                                <span class="fa fa-facebook-square"></span>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="col-md-3">
+                        <center>
+                            <a class="footercolor" href="#">Adventurer PH
+                                <span class="fa fa-instagram"></span>
+                            </a>
+                        </center>
+                    </div>
+                    <div class="col-md-3">
+                        <center>
+                            <a class="footercolor" href="#">Tombow PH
+                                <span class="fa fa-facebook-square"></span>
+                            </a>
+                        </center>
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <center>
+                            <a class="footercolor" href="#">Tombow PH
+                                <span class="fa fa-instagram"></span>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+
+
+                <br>
+
+                <br>
+
+
+
+
+
+                <p class="text-align-center">Powered by
+                    <a href="http://globagilityinc.com/" style="text-decoration: none;">Globagility</a>
+                </p>
+
+
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script type="text/javascript">
+            // $('#dropdown').hover(function(){
+            //     $('#dropdown-content').css({'opacity': 1})},
+            // function(){
+            //     $('#dropdown-content').css({'opacity': 0})
+            // });​​
+
+            (function () {
+
+
+                $('#carousel3slot1').carousel({
+                    interval: 2000
+                });
+                $('#carousel3slot2').carousel({
+                    interval: 2000
+                });
+                $('#carousel3slot3').carousel({
+                    interval: 2000
+                });
+            }());
+
+        (function () {
+            $('.carousel-showmanymoveone .item').each(function () {
+                var itemToClone = $(this);
+
+                for (var i = 1; i < 3; i++) {
+                    itemToClone = itemToClone.next();
+
+                    // wrap around if at end of item collection
+                    if (!itemToClone.length) {
+                        itemToClone = $(this).siblings(':first');
+                    }
+
+                    // grab item, clone, add marker class, add to collection
+                    itemToClone.children(':first-child').clone()
+                        .addClass("cloneditem-" + (i))
+                        .appendTo($(this));
+                }
+            });
+        }());
+    </script>
+    <script type="text/javascript" src="Goldwings/instafeed.js">
+    </script>
+    <script type="text/javascript" src="Goldwings/custominstafeed.js">
+    </script>
+
+
+    <script src="./Goldwings/wow.js">
+    </script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 100,
+            callback: function (box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        });
+        wow.init();
+    </script>
+
+</body>
+
+</html>
