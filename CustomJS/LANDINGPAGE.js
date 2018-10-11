@@ -1406,6 +1406,13 @@ $('.HomeClear').click(function () {
     BreadCrumbs();
     GetData();
 
+     $(document).ajaxStart(function () {
+         $("#wait").css("display", "block");
+     });
+     $(document).ajaxComplete(function () {
+         $("#wait").css("display", "none");
+     });
+
 
     $('#Products').load('LandingPage.html#Products');
     $('#Related').load('LandingPage.html#Related');
@@ -1440,6 +1447,14 @@ $('.BreadItems').click(function () {
     }
     BreadCrumbs();
     GetData();
+
+    $(document).ajaxStart(function () {
+        $("#wait").css("display", "block");
+    });
+    $(document).ajaxComplete(function () {
+        $("#wait").css("display", "none");
+    });
+
 
 
     $('#Products').load('LandingPage.html#Products');
@@ -1484,6 +1499,14 @@ $('.Navigate').click(function () {
     BreadCrumbs();
     GetData();
 
+    $(document).ajaxStart(function () {
+        $("#wait").css("display", "block");
+    });
+    $(document).ajaxComplete(function () {
+        $("#wait").css("display", "none");
+    });
+
+  
 
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
 
