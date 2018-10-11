@@ -325,13 +325,13 @@ function BannerImage(jsons) {
 
         if (jsons[0]["Brand"] == undefined) {
             if (jsonsCategory[0]["BannerImage"] == "") {
-                txt += ' <img src="../IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
+                txt += ' <img src="IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
             } else {
                 txt += ' <img src= "' + jsonsCategory[0]["BannerImage"] + '" style = "width:100%;max-height:440px;" >';
             }
         } else {
             if (jsons[0]["BannerImage"] == "") {
-                txt += ' <img src="../IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
+                txt += ' <img src="IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
             } else {
                 txt += ' <img src= "' + jsons[0]["BannerImage"] + '" style = "width:100%;max-height:440px;" >';
             }
@@ -340,7 +340,7 @@ function BannerImage(jsons) {
 
     } else {
 
-        txt += ' <img src="../IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
+        txt += ' <img src="IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
     }
 
     $("#BannerImage").html(txt);
@@ -658,12 +658,12 @@ $("#SearchItem").click(function () {
  
       
 
-              txt = ' <img src="../IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
+              txt = ' <img src="IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
           $("#BannerImage").html(txt);
              $('#Products').empty();
              $('#TabsCategory').empty();
              $('#CategoryHeading').empty();
-       $('#Products').load('Adventurer.html#Products');
+       $('#Products').load('LandingPage.html#Products');
       
 
 });
@@ -1407,8 +1407,8 @@ $('.HomeClear').click(function () {
     GetData();
 
 
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
     $('#TabsCategory').empty();
 });
 $('.BreadItems').click(function () {
@@ -1442,8 +1442,8 @@ $('.BreadItems').click(function () {
     GetData();
 
 
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
  
     if (bread.length <=2) {
         
@@ -1488,10 +1488,10 @@ $('.Navigate').click(function () {
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
 
 
-    $.getScript('../Goldwings/velocity.js?cache=' + startTime());
+    $.getScript('Goldwings/velocity.js?cache=' + startTime());
 
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
 });
 $('.NavigateProduct').click(function () {
 
@@ -1530,7 +1530,7 @@ $('.NavigateProduct').click(function () {
 
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
 
-    $.getScript('../Goldwings/velocity.js?cache=' + startTime());
+    $.getScript('Goldwings/velocity.js?cache=' + startTime());
 
     $('#Products').empty();
 
@@ -1547,8 +1547,8 @@ $('.NavigateProduct').click(function () {
     }, 2000);
 
 
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
     $("ul.tabs li[rel^='tab1']").addClass("active");
 });
 $('.NavigateRelated').click(function () {
@@ -1588,7 +1588,7 @@ $('.NavigateRelated').click(function () {
 
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
 
-    $.getScript('../Goldwings/velocity.js?cache=' + startTime());
+    $.getScript('Goldwings/velocity.js?cache=' + startTime());
 
     $('#Products').empty();
 
@@ -1605,8 +1605,8 @@ $('.NavigateRelated').click(function () {
     }, 2000);
 
 
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
     $("ul.tabs li[rel^='tab1']").addClass("active");
 });
 $('.NavigateColor').click(function () {
@@ -1626,7 +1626,7 @@ $('.NavigateColor').click(function () {
 
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
 
-    $.getScript('../Goldwings/velocity.js?cache=' + startTime());
+    $.getScript('Goldwings/velocity.js?cache=' + startTime());
 
     $('#Products').empty();
 
@@ -1643,8 +1643,8 @@ $('.NavigateColor').click(function () {
     }, 2000);
 
 
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
 
     $("ul.tabs li[rel^='tab1']").addClass("active");
 
@@ -1670,7 +1670,7 @@ $('.NavigateImage').click(function () {
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
 
 
-    $.getScript('../Goldwings/velocity.js?cache = ' + startTime());
+    $.getScript('Goldwings/velocity.js?cache = ' + startTime());
 
     $('#Products').empty();
 
@@ -1687,9 +1687,9 @@ $('.NavigateImage').click(function () {
         $('#loading').css("display", "none");
     }, 2000);
 
-    $('#brandAccordionAdventurer').load('Adventurer.html#brandAccordionAdventurer');
-    $('#Products').load('Adventurer.html#Products');
-    $('#Related').load('Adventurer.html#Related');
+    $('#brandAccordionAdventurer').load('LandingPage.html#brandAccordionAdventurer');
+    $('#Products').load('LandingPage.html#Products');
+    $('#Related').load('LandingPage.html#Related');
     $("ul.tabs li[rel^='tab1']").addClass("active");
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
@@ -1700,7 +1700,7 @@ $('.NavigateImage').click(function () {
 velo();
 
 function velo() {
-    $.getScript('../Goldwings/velocity.js');
+    $.getScript('Goldwings/velocity.js');
     var $productsOuter = $('.vs-products-outer');
     // Get row height
     var rowHeight = $('.vs-slides-inner').height();
@@ -1868,7 +1868,7 @@ function ImageValidation(url) {
     var img = new Image();
     img.src = url;
     if (url == null || url == "") {
-        return "../IMAGES/No.jpg";
+        return "IMAGES/No.jpg";
     } else if (img.height != 0) {
         return img.src;
     } else {

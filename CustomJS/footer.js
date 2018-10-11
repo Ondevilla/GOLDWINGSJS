@@ -1,19 +1,11 @@
-txt='   <div id="preFooter" class="unscrolled">';
-txt+='        <div class="pre-footer-inner">';
-txt+='            <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Pre-Footer Content" data-type="block-field" data-updated-on="1516844534124" id="preFooterBlocks">';
-txt+='                <div class="row sqs-row">';
-txt+='                    <div class="col sqs-col-12 span-12"></div>';
-txt+='                </div>';
-txt+='            </div>';
-txt+='        </div>';
-txt+='    </div>';
-txt+='    <footer id="footer" role="contentinfo">';
+
+txt='    <footer id="footer" role="contentinfo">';
 txt+='        <div class="footer-inner">';
 txt+= '            <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1456895791287" id="footerBlocks">';   
 txt+='                  <div class="row">';
 txt+='                    <div class="col-md-3">';
 txt+='                        <center style="width: 90%;border-bottom: 2px solid rgba(255,255,255,.4);padding: 15px;">';
-txt += '                            <div class="footercolor footerColumnOneLink" value="Goldwings 090318.html" style="max-height:50px; text-decoration: none;cursor:pointer">HOME';
+txt += '                            <div class="footercolor footerColumnOneLink" value="index.html" style="max-height:50px; text-decoration: none;cursor:pointer">HOME';
 txt+='                                <i class="fa fa-caret-right pull-right" style="font-size:24px;"></i>';
 txt+='                            </div>';
 txt+='                        </center>';
@@ -120,59 +112,59 @@ txt+='                    </div>';
 
     $('#footer').html(txt);
 
-    // $('.footerLink').click(function () {
-    //     if (window.location.pathname!='/Goldwings%20mockup%20final%202/LandingPage.html')
-    //     {
-    //         window.location.href="LandingPage.html";
-    //     }
+    $('.footerLink').click(function () {
+        if (window.location.pathname!='/Goldwings%20mockup%20final%202/LandingPage.html')
+        {
+            window.location.href="LandingPage.html";
+        }
         
-    //     localStorage.clear();
-    //     bread = [];
-    //     var crum = $(this).attr('value').split(" / ");
+        localStorage.clear();
+        bread = [];
+        var crum = $(this).attr('value').split(" / ");
 
-    //     for (i = 0; i < crum.length; i++) {
-    //         bread.push({
-    //             "link": crum[i]
-    //         });
+        for (i = 0; i < crum.length; i++) {
+            bread.push({
+                "link": crum[i]
+            });
 
-    //     }
+        }
 
-    //     localStorage.setItem('bread', JSON.stringify(bread));
+        localStorage.setItem('bread', JSON.stringify(bread));
 
-    //     $("html,body").animate({
-    //         scrollTop: 425
-    //     }, 3000);
+        $("html,body").animate({
+            scrollTop: 425
+        }, 3000);
 
 
      
 
-    //     $('#Products').empty();
+        $('#Products').empty();
 
-    //     $(document).ajaxStart(function () {
-    //         $("#wait").css("display", "block");
-    //     });
-    //     $(document).ajaxComplete(function () {
-    //         $("#wait").css("display", "none");
-    //     });
+        $(document).ajaxStart(function () {
+            $("#wait").css("display", "block");
+        });
+        $(document).ajaxComplete(function () {
+            $("#wait").css("display", "none");
+        });
 
 
-    //     $('#loading').css("display", "block");
-    //     setTimeout(function () {
-    //         $('#loading').css("display", "none");
-    //     }, 2000);
+        $('#loading').css("display", "block");
+        setTimeout(function () {
+            $('#loading').css("display", "none");
+        }, 2000);
         
-    //     $('#brandAccordionAdventurer').load('LandingPage.html#brandAccordionAdventurer');
-    //     $('#Products').load('LandingPage.html#Products');
+        $('#brandAccordionAdventurer').load('LandingPage.html#brandAccordionAdventurer');
+        $('#Products').load('LandingPage.html#Products');
 
-    //     if(bread.length<=2){
-    //         $("#CategoryHeading").empty();
-    //     }
-    // });
+        if(bread.length<=2){
+            $("#CategoryHeading").empty();
+        }
+    });
 
-    //  $('.footerColumnOneLink').click(function () {
-    //     localStorage.clear();
-    //     bread = [];
-    //     window.location.href = $(this).attr('value');
-    //  });
+     $('.footerColumnOneLink').click(function () {
+        localStorage.clear();
+        bread = [];
+        window.location.href = $(this).attr('value');
+     });
 
    

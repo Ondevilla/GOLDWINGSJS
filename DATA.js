@@ -2,14 +2,14 @@
 [{
         "RowID":1,
         "Brand": "Adventurer",
-        "ContentImage": "../IMAGES/Logos/Adventurer.png",
+        "ContentImage": "IMAGES/Logos/Adventurer.png",
          "BannerImage": "https://goldwings.com.ph/sites/default/files/styles/brand_header/public/brand-header/image-brand-header-adventurer.jpg?itok=4G7NRBPl",
         "Categories": [{
                 "RowID": 1,
                 "BrandID": 1,
                 "Name": "Binders",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/rb-320a4-01_0.jpg?itok=7xjLrN55",
-                "BannerImage": "../Others/Product Banner/Adventurer banner-01.png",
+                "BannerImage": "Others/Product Banner/Adventurer banner-01.png",
                 "SubCategories": [{
                         "RowID": 1,
                         "CategoryID": 1,
@@ -76,7 +76,7 @@
                 "BrandID": 1,
                 "Name": "Card Holders",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/card_case_a-sizes-01.jpg?itok=Lv5ye9od",
-                 "BannerImage": "../Others/Product Banner/Adventurer banner-04.png",
+                 "BannerImage": "Others/Product Banner/Adventurer banner-04.png",
                 "SubCategories": [{
                         "RowID": 5,
                         "CategoryID": 2,
@@ -105,7 +105,7 @@
                 "BrandID": 1,
                 "Name": "Certificate Holders",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/ch-1-01.jpg?itok=2gNqHtqI",
-               "BannerImage": "../Others/Product Banner/Adventurer banner-05.png",
+               "BannerImage": "Others/Product Banner/Adventurer banner-05.png",
                 "SubCategories": [],
          
                 "Href": "#"
@@ -115,7 +115,7 @@
                 "BrandID": 1,
                 "Name": "Clip Boards",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/cbpb-fc-03.jpg?itok=vnUkzxCS",
-                "BannerImage": "../Others/Product Banner/Adventurer banner-07.png",
+                "BannerImage": "Others/Product Banner/Adventurer banner-07.png",
                 "SubCategories": [{
                         "RowID": 7,
                         "CategoryID": 4,
@@ -142,7 +142,7 @@
                 "BrandID": 1,
                 "Name": "Cut-size Plastic Cover",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/cpc_no_core-01.jpg?itok=v0CrlCZn",
-               "BannerImage": "../Others/Product Banner/Adventurer banner-06.png",
+               "BannerImage": "Others/Product Banner/Adventurer banner-06.png",
                 "SubCategories": [{
                     "RowID": 9,
                     "CategoryID": 5,
@@ -170,7 +170,7 @@
                 "BrandID": 1,
                 "Name": "File Cases",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/fc-121-03.jpg?itok=s9235nAR",
-                "BannerImage": "../Others/Product Banner/Adventurer banner-08.png",
+                "BannerImage": "Others/Product Banner/Adventurer banner-08.png",
                 "SubCategories": [],
           
                 "Href": "#"
@@ -180,7 +180,7 @@
                 "BrandID": 1,
                 "Name": "Pencil Cases",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/pc-13-03.jpg?itok=NzsCAYlU",
-                "BannerImage": "../Others/Product Banner/Adventurer banner-09.png",
+                "BannerImage": "Others/Product Banner/Adventurer banner-09.png",
                 "SubCategories": [],
              
                 "Href": "#"
@@ -191,7 +191,7 @@
                 "BrandID": 1,
                 "Name": "Plastic Envelopes",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/e-11-01.jpg?itok=HAAadfs9",
-                "BannerImage": "../Others/Product Banner/Adventurer banner-02.png",
+                "BannerImage": "Others/Product Banner/Adventurer banner-02.png",
                 "SubCategories": [{
                         "RowID": 9,
                         "CategoryID": 8,
@@ -277,7 +277,7 @@
                 "BrandID": 1,
                 "Name": "Plastic Jackets",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/ffj-01.jpg?itok=NiGu4mvK",
-                "BannerImage": "../Others/Product Banner/Adventurer banner-10.png",
+                "BannerImage": "Others/Product Banner/Adventurer banner-10.png",
                 "SubCategories": [],
                 "Href": "#"
             },
@@ -286,7 +286,7 @@
                 "BrandID": 1,
                 "Name": "Zipper Bags",
                 "ContentImage": "https://goldwings.com.ph/sites/default/files/styles/product_full/public/product-item/z-11-01_0.jpg?itok=Au3Lz8Wl",
-               "BannerImage": "../Others/Product Banner/Adventurer banner-11.png",
+               "BannerImage": "Others/Product Banner/Adventurer banner-11.png",
                 "SubCategories": [{
                         "RowID": 13,
                         "CategoryID": 10,
@@ -318,7 +318,7 @@
     {
         "RowID": 2,
         "Brand": "Livinbox",
-         "ContentImage": "../IMAGES/Logos/livinbox.png",
+         "ContentImage": "IMAGES/Logos/livinbox.png",
          "BannerImage": "https://goldwings.com.ph/sites/default/files/styles/brand_header/public/brand-header/image-brand-header-livinbox.jpg?itok=0tST2BrT",
         "Categories": [{
                 "RowID": 11,  
@@ -397,7 +397,7 @@
     {
         "RowID": 3,
         "Brand": "Tombow",
-        "ContentImage": "../IMAGES/Logos/tombow.png",
+        "ContentImage": "IMAGES/Logos/tombow.png",
         "BannerImage": "https://goldwings.com.ph/sites/default/files/styles/brand_header/public/brand-header/tom_56188_8.jpg?itok=ki3q43hS",
         "Categories": [{
                 "RowID": 19,
