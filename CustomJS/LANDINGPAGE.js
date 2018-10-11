@@ -1,220 +1,3 @@
-// function SideBar(brand) {
-
-//     var toBeSearch = '//*[Brand="' + brand + '"]';
-
-//     jsonVar = JSON.search(jsonVarData, toBeSearch);
-//     var txt = "";
-
-//     //Brands
-//     txt += '<div id="accordion" style="background-color:#f1f1f1;margin:10px;border-radius:3px; border-top:#ddd 1px solid;border-left:#ddd 1px solid;border-right:#ddd 1px solid;">';
-//     for (let i = 0; i < jsonVar.length; i++) {
-
-//         var brandName = jsonVar[i]["Brand"];
-//         var brand = brandName.replace(/\s/g, "") + [i];
-//         var jsonHasCategories = jsonVar[i]["Categories"].length;
-//         txt += '<div class="card">';
-//         txt += ' <div class="card-header" id="heading' + brand + '">';
-
-//         txt += ' <button class="btn  collapsed btn-block word-break" data-toggle="collapse" data-target="#collapse' + brand + '" aria-expanded="false" style="text-align: left;background-color:#58585a; cursor:pointer; padding:6px;"';
-//         txt += ' aria-controls="collapse' + brand + '">';
-//         txt += ' <a style="color:white;text-decoration:none;" class="Navigate" value="' + brandName + '" ><center> ' + brandName + '</center</a>';
-
-
-//         txt += '</button>';
-
-//         txt += '</div>';
-//         txt += ' <div id="collapse' + brand + '" class="collapse in" aria-labelledby="heading' + brand + '" data-parent="#accordion">';
-//         txt += ' <div class="card-body">';
-//         //Categories
-//         txt += ' <div class=" collapsed btn-block" id="accordionSub' + brand + '" >';
-
-
-//         var jsonCategories = 0;
-//         if (jsonHasCategories == null || jsonHasCategories == undefined) {
-//             jsonCategories = 0;
-//         } else {
-//             jsonCategories = jsonHasCategories;
-//         }
-
-//         for (let j = 0; j < jsonCategories; j++) {
-
-//             var categoryName = jsonVar[i]["Categories"][j]["Name"];
-//             var hrefCategories = jsonVar[i]["Categories"][j]["Href"];
-//             var jsonHasSubCategories = jsonVar[i]["Categories"][j]["SubCategories"].length;
-//             var categories = categoryName.replace(/\s/g, "") + [j];
-
-//             txt += ' <div class="card">';
-//             txt += ' <div class="card-header" id="headingOneSub' + categories + '">';
-
-//             if (jsonHasSubCategories == null || jsonHasSubCategories == undefined || jsonHasSubCategories == 0) {
-//                 txt += ' <button class="btn   btn-block collapsed word-break" data-toggle="collapse" data-target="#collapseOneSub' + categories + '" aria-expanded="false"';
-//                 txt += ' aria-controls="collapseOneSub' + categories + '" style="background-color:transparent;font-size:14px;text-align:left;padding-left:24px;padding-right:6px;padding-bottom:0px;padding-top:0px;background-color:tranparent;border-radius:0px; border-bottom:#ddd 1px solid;"  ><a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + '" > ' + categoryName + ' </a>';
-//                 txt += ' </button>';
-//             } else {
-//                 txt += ' <button class="btn   btn-block collapsed word-break collapseArrow" data-toggle="collapse" data-target="#collapseOneSub' + categories + '"  aria-expanded="false"';
-//                 txt += ' aria-controls="collapseOneSub' + categories + '" style="background-color:transparent;font-size:14px;text-align:left;padding-left:24px;padding-right:6px;background-color:tranparent; padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"> <a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + '" > ' + categoryName + ' </a>';
-//                 txt += ' </button>';
-//             }
-
-
-//             txt += ' </div>';
-//             if (jsonHasSubCategories == null || jsonHasSubCategories == undefined || jsonHasSubCategories == 0) { } else {
-
-//                 txt += ' <div id="collapseOneSub' + categories + '" class="collapse" aria-labelledby="headingOneSub' + categories + '" data-parent="#accordionSub' + brand + '">';
-//                 txt += ' <div class="card-body">';
-//                 //Sub SubCategories
-
-//                 txt += ' <div class="btn  collapsed btn-block" id="accordionSubCat' + [j] + '" style="padding:0px;">';
-//                 var jsonSubCategories = 0;
-//                 if (jsonHasSubCategories == null || jsonHasSubCategories == undefined) {
-//                     jsonSubCategories = 0;
-//                 } else {
-//                     jsonSubCategories = jsonVar[i]["Categories"][j]["SubCategories"].length;
-//                 }
-
-//                 for (let k = 0; k < jsonSubCategories; k++) {
-//                     var subCategoryName = jsonVar[i]["Categories"][j]["SubCategories"][k]["Name"];
-//                     var hrefSubCategories = jsonVar[i]["Categories"][j]["SubCategories"][k]["Href"];
-//                     var jsonHasSubCategories2 = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"].length;
-//                     var subCategories = subCategoryName.replace(/\s/g, "") + [k];
-
-//                     txt += ' <div class="card">';
-//                     txt += ' <div class="card-header" id="headingOneSubCat' + subCategories + '">';
-//                     if (jsonHasSubCategories2 == null || jsonHasSubCategories2 == undefined || jsonHasSubCategories2 == 0) {
-//                         txt += ' <button class="btn   btn-block collapsed word-break" data-toggle="collapse" data-target="#collapseOneSubCat' + subCategories + '" aria-expanded="false" aria-controls="collapseOneSubCat' + subCategories + '" style="background-color:transparent; font-size:12px;text-align:left;padding-left:36px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"> <a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + '" > ';
-//                         txt += '⮡   ' + subCategoryName;
-//                         txt += '</a> </button>';
-//                     } else {
-//                         txt += ' <button class="btn   btn-block collapsed word-break collapseArrow" data-toggle="collapse" data-target="#collapseOneSubCat' + subCategories + '"  aria-expanded="false" aria-controls="collapseOneSubCat' + subCategories + '" style=" background-color:transparent;font-size:12px;text-align:left;padding-left:36px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"> <a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + '" >';
-//                         txt += '⮡   ' + subCategoryName;
-//                         txt += '</a> </button>';
-
-//                     }
-
-
-//                     txt += ' </div>';
-
-//                     if (jsonHasSubCategories2 == null || jsonHasSubCategories2 == undefined || jsonHasSubCategories2 == 0) { } else {
-//                         txt += ' <div id="collapseOneSubCat' + subCategories + '" class="collapse" aria-labelledby="headingOneSubCat' + subCategories + '";data-parent="#accordionSubCat' + subCategories + '">';
-//                         txt += ' <div class="card-body">';
-//                         // txt +=   ' Lorem3' ;
-//                         //SubCategories2
-
-
-//                         txt += '    <div class="btn  collapsed btn-block"  id="accordionSubCat' + [k] + '" style="padding:0px;">';
-//                         var jsonSubCategories2 = 0;
-//                         if (jsonHasSubCategories2 == null || jsonHasSubCategories2 == undefined) {
-//                             jsonSubCategories2 = 0;
-//                         } else {
-//                             jsonSubCategories2 = jsonHasSubCategories2;
-//                         }
-
-//                         for (let l = 0; l < jsonSubCategories2; l++) {
-//                             var subCategory2Name = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"][l]["Name"];
-//                             var hrefSubCategories2 = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"][l]["Href"];
-//                             var subCategories2 = subCategory2Name.replace(/\s/g, "") + [k];
-//                             var jsonHasSubCategories3 = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"][l]["SubCategories3"].length;
-//                             txt += ' <div class="card">';
-//                             txt += ' <div class="card-header" id="headingOneSubCat' + subCategories2 + '">';
-
-
-//                             if (jsonHasSubCategories3 == null || jsonHasSubCategories3 == undefined || jsonHasSubCategories3 == 0) {
-//                                 txt += ' <button class="btn   btn-block collapsed word-break" data-toggle="collapse" data-target="#collapseOneSubCat2' + subCategories2 + '" aria-expanded="false" aria-controls="collapseOneSubCat' + subCategories2 + '" style="background-color:transparent;font-size:12px;text-align:left;padding-left:52px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + '" >';
-//                                 txt += '⮡   ' + subCategory2Name;
-//                                 txt += ' </a></button>';
-//                             } else {
-//                                 txt += ' <button class="btn   btn-block collapsed word-break collapseArrow" data-toggle="collapse" data-target="#collapseOneSubCat2' + subCategories2 + '" aria-expanded="false" aria-controls="collapseOneSubCat' + subCategories2 + '" style="background-color:transparent;font-size:12px;text-align:left;padding-left:52px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + '" >';
-//                                 txt += '⮡   ' + subCategory2Name;
-//                                 txt += ' </a></button>';
-
-//                             }
-
-
-//                             txt += ' </div>';
-
-
-//                             if (jsonHasSubCategories3 == null || jsonHasSubCategories3 == undefined || jsonHasSubCategories3 == 0) { } else {
-//                                 txt += ' <div id="collapseOneSubCat2' + subCategories2 + '" class="collapse" aria-labelledby="headingOneSubCat' + subCategories2 + '";data-parent="#accordionSubCat' + subCategories2 + '">';
-//                                 txt += ' <div class="card-body">';
-
-//                                 //SubCatergories3
-
-
-//                                 txt += '    <div class="btn  collapsed btn-block"  id="accordionSubCat' + [l] + '" style="padding:0px;">';
-//                                 var jsonSubCategories3 = 0;
-//                                 if (jsonHasSubCategories3 == null || jsonHasSubCategories3 == undefined) {
-//                                     jsonSubCategories3 = 0;
-//                                 } else {
-//                                     jsonSubCategories3 = jsonHasSubCategories3;
-//                                 }
-
-//                                 for (let m = 0; m < jsonSubCategories3; m++) {
-//                                     var subCategory3Name = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"][l]["SubCategories3"][m]["Name"];
-//                                     var hrefSubCategories3 = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"][l]["SubCategories3"][m]["Href"];
-//                                     var subCategories3 = subCategory3Name.replace(/\s/g, "") + [k];
-//                                     txt += ' <div class="card">';
-
-
-//                                     txt += ' <button class="btn   btn-block collapsed word-break" data-toggle="collapse" data-target="#collapseOneSubCat' + subCategories3 + '" aria-expanded="false" aria-controls="collapseOneSubCat' + subCategories3 + '" style="background-color:transparent;font-size:12px;text-align:left;padding-left:70px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + ' / ' + subCategory3Name + '" >';
-//                                     txt += '⮡   ' + subCategory3Name;
-//                                     txt += ' </a></button>';
-
-
-//                                     txt += ' </div>';
-//                                 }
-//                                 txt += ' </div>';
-
-
-//                                 txt += ' </div>';
-
-//                                 //End SubCategories3
-
-
-//                                 txt += ' </div>';
-//                                 txt += ' </div>';
-//                             }
-//                             txt += ' </div>';
-
-
-//                         }
-//                         txt += ' </div>';
-
-//                         //End SubCategories2
-
-
-//                         txt += ' </div>';
-//                         txt += ' </div>';
-//                     }
-//                     txt += ' </div>';
-
-//                 }
-
-
-//                 txt += ' </div>';
-//                 //End SubCategories
-//                 // txt += ' Lorem2';
-//                 txt += ' </div>';
-//                 txt += ' </div>';
-//             }
-//             txt += ' </div>';
-//         }
-//         txt += ' </div>';
-//         //End Categories
-//         // txt += ' Lorem1';
-//         txt += ' </div>';
-//         txt += ' </div>';
-//         txt += '</div>';
-
-//     }
-//     txt += "</div>";
-//     //End Brands
-
-//     return txt;
-// }
-
-
-
-
 function SideBar(brand) {
 
     var toBeSearch = '//*[Brand="' + brand + '"]';
@@ -222,7 +5,7 @@ function SideBar(brand) {
     jsonVar = JSON.search(jsonVarData, toBeSearch);
     var txt = "";
 
-    txt += '<div id="accordion" style="background-color:#f1f1f1;margin:10px;border-radius:3px; border-top:#ddd 1px solid;border-left:#ddd 1px solid;border-right:#ddd 1px solid;">';
+    txt += '<div id="accordion" style="background-color:#f1f1f1;margin:10px;border-radius:5px; border-top:#ddd 1px solid;border-left:#ddd 1px solid;border-right:#ddd 1px solid;">';
 
     for (let i = 0; i < jsonVar.length; i++) {
 
@@ -232,7 +15,7 @@ function SideBar(brand) {
 
 
         //Brands
-        txt += '<div class="accordion  active"  style="width:100%;text-align: left;background-color:#58585a; cursor:pointer; padding:6px;">';
+        txt += '<div class="accordion  active"  style="width:100%;text-align: left;background-color:#58585a; cursor:pointer; padding:6px; border-radius:5px;">';
         txt += '<center> <a style="color:white;text-decoration:none;padding:0px;" class="Navigate" value="' + brandName + '" > ' + brandName + '</a></center>';
         txt += '</div>';
         txt += '<div class="panel show">';
@@ -255,10 +38,10 @@ function SideBar(brand) {
             if (jsonHasSubCategories == null || jsonHasSubCategories == undefined || jsonHasSubCategories == 0) {
                 var HasCollapseArrow = '';
             } else {
-                var HasCollapseArrow = 'collapseArrow';
+                var HasCollapseArrow = 'collapsable';
             }
             //Category
-            txt += ' <div class="accordion  collapsed ' + HasCollapseArrow + ' "  data-toggle="collapse"  style="width:100%;background-color:transparent;font-size:14px;text-align:left;padding-left:24px;padding-right:6px;padding-bottom:0px;padding-top:0px;background-color:tranparent;border-radius:0px; border-bottom:#ddd 1px solid;"  ><a style="color:black;text-decoration:none;padding:5px 0px;cursor:pointer;" class="Navigate" value="' + brandName + ' / ' + categoryName + '" > ' + categoryName + ' </a>';
+            txt += ' <div class="accordion ' + HasCollapseArrow + ' "   style="width:100%;background-color:transparent;font-size:14px;text-align:left;padding-left:30px;padding-right:6px;padding-bottom:0px;padding-top:0px;background-color:tranparent;border-radius:0px; border-bottom:#ddd 1px solid;"  ><a style="color:black;text-decoration:none;padding:5px 0px;cursor:pointer;" class="Navigate" value="' + brandName + ' / ' + categoryName + '" > ' + categoryName + '</a>';
             txt += ' </div>';
 
             txt += '<div class="panel">';
@@ -281,12 +64,12 @@ function SideBar(brand) {
                     if (jsonHasSubCategories2 == null || jsonHasSubCategories2 == undefined || jsonHasSubCategories2 == 0) {
                         var HasCollapseArrow = '';
                     } else {
-                        var HasCollapseArrow = 'collapseArrow';
+                        var HasCollapseArrow = 'collapsablesubcat';
                     }
 
                     //SubCategory
-                    txt += ' <div class="accordion collapsed ' + HasCollapseArrow + '" data-toggle="collapse"  style=" width:100%;background-color:transparent;font-size:12px;text-align:left;padding-left:36px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"> <a style="color:black;text-decoration:none;padding:5px 0px;cursor:pointer;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + '" >';
-                    txt += '⮡   ' + subCategoryName;
+                    txt += ' <div class="accordion  ' + HasCollapseArrow + '"  style=" width:100%;background-color:transparent;font-size:12px;text-align:left;padding-left:45px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"> <a style="color:black;text-decoration:none;padding:5px 0px;cursor:pointer;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + '" >';
+                    txt +=  subCategoryName;
                     txt += '</a> </div>';
                     txt += '<div class="panel">';
 
@@ -307,12 +90,12 @@ function SideBar(brand) {
                             if (jsonHasSubCategories3 == null || jsonHasSubCategories3 == undefined || jsonHasSubCategories3 == 0) {
                                 var HasCollapseArrow = '';
                             } else {
-                                var HasCollapseArrow = 'collapseArrow';
+                                var HasCollapseArrow = 'collapsablesubcat2';
                             }
 
                             //SubCategory2
-                            txt += ' <div  class="accordion collapsed ' + HasCollapseArrow + '" data-toggle="collapse"  style="width:100%;background-color:transparent;font-size:12px;text-align:left;padding-left:52px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;cursor:pointer;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + '" >';
-                            txt += '⮡   ' + subCategory2Name;
+                            txt += ' <div  class="accordion  ' + HasCollapseArrow + '"   style="width:100%;background-color:transparent;font-size:12px;text-align:left;padding-left:60px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;cursor:pointer;padding:5px 0px;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + '" >';
+                            txt +=  subCategory2Name;
                             txt += ' </a></div>';
                             txt += '<div class="panel">';
                             if (jsonHasSubCategories3 == null || jsonHasSubCategories3 == undefined || jsonHasSubCategories3 == 0) {} else {
@@ -331,8 +114,8 @@ function SideBar(brand) {
                                     var hrefSubCategories3 = jsonVar[i]["Categories"][j]["SubCategories"][k]["SubCategories2"][l]["SubCategories3"][m]["Href"];
                                     var subCategories3 = subCategory3Name.replace(/\s/g, "") + [k];
 
-                                    txt += ' <div  style="width:100%;background-color:transparent;font-size:12px;text-align:left;padding-left:70px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;padding:5px 0px;cursor:pointer;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + ' / ' + subCategory3Name + '" >';
-                                    txt += '⮡   ' + subCategory3Name;
+                                    txt += ' <div  style="width:100%;background-color:transparent;font-size:12px;text-align:left;padding-left:75px;padding-right:6px;border-radius:0px;padding-bottom:0px;padding-top:0px;border-radius:0px; border-bottom:#ddd 1px solid"><a style="color:black;text-decoration:none;padding:5px 0px;cursor:pointer;" class="Navigate" value="' + brandName + ' / ' + categoryName + ' / ' + subCategoryName + ' / ' + subCategory2Name + ' / ' + subCategory3Name + '" >';
+                                    txt += subCategory3Name;
                                     txt += ' </a></div>';
                                 }
                             }
@@ -370,6 +153,7 @@ for (i = 0; i < acc.length; i++) {
 
     acc[i].onclick = function () {
         this.classList.toggle("active");
+         this.classList.toggle("rotate");
         this.nextElementSibling.classList.toggle("show");
     }
 }
@@ -836,8 +620,7 @@ function searchField() {
 $("#SearchItem").click(function () {
     var key = $("#Keyword").val();
 
-    $('#Products').empty();
-    $('#TabsCategory').empty();
+ 
      localStorage.clear();
      bread = [];
      bread.push({
@@ -873,8 +656,15 @@ $("#SearchItem").click(function () {
      });
 
  
+      
 
+              txt = ' <img src="../IMAGES/NoBanner.jpg" style="width:100%;max-height:440px;" >';
+          $("#BannerImage").html(txt);
+             $('#Products').empty();
+             $('#TabsCategory').empty();
+             $('#CategoryHeading').empty();
        $('#Products').load('Adventurer.html#Products');
+      
 
 });
 
@@ -936,7 +726,8 @@ function ProductItem(tempo, tempocount) {
             $('#Products').empty();
 
         } else {
-
+                $('#CategoryHeading').empty();
+                $('#TabsCategory').empty();
             ProductItemSpecific();
         }
     }
@@ -947,7 +738,8 @@ function ProductItem(tempo, tempocount) {
             $('#Products').empty();
 
         } else {
-
+                $('#CategoryHeading').empty();
+                $('#TabsCategory').empty();
             ProductItemSpecific();
         }
     }
@@ -1287,7 +1079,7 @@ else
              txt += '<div class="NavigateRelated" value="' + path + '" style="cursor:pointer">';
              txt += ' <div class="col-md-2 redbox">';
              txt += ' <div style="background:#f1f1f1; padding:10px; border-radius: 10px;margin:10px 5px;">';
-             txt += ' <center><img class="card-img-top" src="' + ImageValidation(chosen[i]["ContentImage"]) + '" style="width:100%;height:100%;max-width:180px;max-height:180px;" alt="Card image cap"></center>';
+             txt += ' <center><img class="card-img-top" src="' + ImageValidation(chosen[i]["ContentImage"]) + '" style="width:100%;height:100%;max-width:180px;max-height:180px;min-width:180px;min-height:180px;" alt="Card image cap"></center>';
              txt += ' <hr style="border-color:#c3c3c3;">';
              txt += ' <div class="card-body">';
              txt += ' <p class="card-text" style="text-align:center;">';
@@ -1652,8 +1444,11 @@ $('.BreadItems').click(function () {
 
     $('#Products').load('Adventurer.html#Products');
     $('#Related').load('Adventurer.html#Related');
-    if (bread.length <= 2) {
+ 
+    if (bread.length <=2) {
+        
         $('#TabsCategory').empty();
+         $('#CategoryHeading').empty();
     }
 
 
@@ -1907,14 +1702,10 @@ velo();
 function velo() {
     $.getScript('../Goldwings/velocity.js');
     var $productsOuter = $('.vs-products-outer');
-
-
     // Get row height
     var rowHeight = $('.vs-slides-inner').height();
     // Set control click state
-
     var canClick = true;
-
     // Slide Up
     $('.vs-control.down').click(function () {
 
@@ -1924,11 +1715,7 @@ function velo() {
         if ($activeRow.next().length && canClick) {
             canClick = false;
             // Get animation distance
-
-
             var distance = -(parseInt($activeRow.data('row-num') + 1) * rowHeight);
-
-
             $productsOuter.velocity({
                 top: distance
             }, 500, function () {
@@ -1937,7 +1724,6 @@ function velo() {
                 $activeRow.removeClass('active').next().addClass('active');
                 // Activate other control
                 $('.vs-control.up').removeClass('deactivate');
-
                 // If there is no next row
                 if (!$('.vs-products.active').next().length) {
                     $('.vs-control.down').addClass('deactivate');
@@ -1949,16 +1735,12 @@ function velo() {
 
     // Slide Down
     $('.vs-control.up').click(function () {
-
         var $activeRow = $('.vs-products.active');
-
         // Check if there is a next row to slide to
         if ($activeRow.prev().length && canClick) {
             canClick = false;
             // Get animation distance
             var distance = -(parseInt($activeRow.data('row-num') - 1) * rowHeight);
-
-
             $productsOuter.velocity({
                 top: distance
             }, 500, function () {
@@ -1967,7 +1749,6 @@ function velo() {
                 $activeRow.removeClass('active').prev().addClass('active');
                 // Activate other control
                 $('.vs-control.down').removeClass('deactivate');
-
                 // If there is no next row
                 if (!$('.vs-products.active').prev().length) {
                     $('.vs-control.up').addClass('deactivate');
