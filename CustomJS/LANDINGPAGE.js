@@ -507,7 +507,7 @@ function Product(jsons) {
             txt += ' <div style="background:#f1f1f1; padding:10px; border-radius: 10px;margin:10px 5px;">';
 
 
-            txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsonVarData[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap"></center>';
+            txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsonVarData[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap"></center>';
 
             txt += ' <hr style="border-color:#c3c3c3;">';
             txt += ' <div class="card-body">';
@@ -568,10 +568,10 @@ function Product(jsons) {
             if (tempo == "Brand") {
 
 
-                txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsons[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap"></center>';
+                txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsons[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap"></center>';
             } else {
 
-                txt += '<center><img class="card-img-top" src="' + ImageValidation(jsons[0][tempo][i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap"></center>';
+                txt += '<center><img class="card-img-top" src="' + ImageValidation(jsons[0][tempo][i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap"></center>';
             }
 
             txt += ' <hr style="border-color:#c3c3c3;">';
@@ -663,6 +663,7 @@ $("#SearchItem").click(function () {
              $('#Products').empty();
              $('#TabsCategory').empty();
              $('#CategoryHeading').empty();
+                $('#Related').empty();
        $('#Products').load('LandingPage.html#Products');
       
 
@@ -774,7 +775,7 @@ function ProductItem(tempo, tempocount) {
                         txt += ' <div style="background:#f1f1f1; padding:10px; border-radius: 10px;margin:10px 5px;">';
 
 
-                        txt += '<center> <img class="card-img-top" src="' + ImageValidation(jsonVarProductSub[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap"></center>';
+                        txt += '<center> <img class="card-img-top" src="' + ImageValidation(jsonVarProductSub[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap"></center>';
                         txt += ' <hr style="border-color:#c3c3c3;">';
                         txt += ' <div class="card-body">';
                         txt += ' <p class="card-text" style="text-align:center; min-height:60px;">';
@@ -813,7 +814,7 @@ function ProductItem(tempo, tempocount) {
                     txt += ' <div style="background:#f1f1f1; padding:10px; border-radius: 10px;margin:10px 5px;">';
 
 
-                    txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsonVarProductSub[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap">';
+                    txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsonVarProductSub[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap">';
                     txt += ' <hr style="border-color:#c3c3c3;"></center>';
                     txt += ' <div class="card-body">';
                     txt += ' <p class="card-text" style="text-align:center; min-height:60px;">';
@@ -857,7 +858,7 @@ function ProductItem(tempo, tempocount) {
                 txt += ' <div style="background:#f1f1f1; padding:10px; border-radius: 10px;margin:10px 5px;">';
 
 
-                txt += '<center> <img class="card-img-top" src="' + ImageValidation(jsonVarProductSub[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap"></center>';
+                txt += '<center> <img class="card-img-top" src="' + ImageValidation(jsonVarProductSub[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap"></center>';
                 txt += ' <hr style="border-color:#c3c3c3;">';
                 txt += ' <div class="card-body">';
                 txt += ' <p class="card-text" style="text-align:center; min-height:60px;">';
@@ -894,7 +895,7 @@ function ProductItem(tempo, tempocount) {
             txt += ' <div class="col-md-3 redbox">';
             txt += ' <div style="background:#f1f1f1; padding:10px; border-radius: 10px;margin:10px 5px;">';
 
-            txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsonVarProduct[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:215px;min-width:215px;max-height:215px;max-width:215px;" alt="Card image cap"></center>';
+            txt += ' <center><img class="card-img-top" src="' + ImageValidation(jsonVarProduct[i]["ContentImage"]) + '" style="width:100%;height:100%;min-height:210px;min-width:210px;max-height:210px;max-width:210px;background:white;" alt="Card image cap"></center>';
             txt += ' <hr style="border-color:#c3c3c3;">';
             txt += ' <div class="card-body">';
             txt += ' <p class="card-text" style="text-align:center; min-height:60px;">';
@@ -1421,8 +1422,8 @@ $('.HomeClear').click(function () {
 $('.BreadItems').click(function () {
 
     $("html,body").animate({
-        scrollTop: 425
-    }, 3000);
+        scrollTop: 440
+    }, 2000);
 
     bread = [{
         "link": "Home"
@@ -1471,8 +1472,8 @@ $('.BreadItems').click(function () {
 $('.Navigate').click(function () {
 
     $("html,body").animate({
-        scrollTop: 425
-    }, 3000);
+        scrollTop: 440
+    }, 2000);
 
     bread = [{
         "link": "Home"
@@ -1519,8 +1520,8 @@ $('.Navigate').click(function () {
 $('.NavigateProduct').click(function () {
 
     $("html,body").animate({
-        scrollTop: 425
-    }, 3000);
+        scrollTop: 440
+    }, 2000);
 
     bread = [{
         "link": "Home"
@@ -1577,8 +1578,8 @@ $('.NavigateProduct').click(function () {
 $('.NavigateRelated').click(function () {
 
     $("html,body").animate({
-        scrollTop: 425
-    }, 3000);
+        scrollTop: 440
+    }, 2000);
 
     bread = [{
         "link": "Home"
@@ -1635,8 +1636,8 @@ $('.NavigateRelated').click(function () {
 $('.NavigateColor').click(function () {
 
     $("html,body").animate({
-        scrollTop: 425
-    }, 3000);
+        scrollTop: 440
+    }, 2000);
 
     localStorage.removeItem('productimage');
     productcolor = [];
@@ -1686,8 +1687,8 @@ $('.NavigateImage').click(function () {
     localStorage.setItem('productimage', JSON.stringify(productimage));
 
     $("html,body").animate({
-        scrollTop: 425
-    }, 3000);
+        scrollTop: 440
+    }, 2000);
 
 
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js');
