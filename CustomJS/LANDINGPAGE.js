@@ -618,9 +618,14 @@ function searchField() {
 }
 
 $("#SearchItem").click(function () {
+
+     $('#loading').css("display", "block");
+     setTimeout(function () {
+         $('#loading').css("display", "none");
+     }, 2000);
     var key = $("#Keyword").val();
 
- 
+  
      localStorage.clear();
      bread = [];
      bread.push({
@@ -634,6 +639,8 @@ $("#SearchItem").click(function () {
  $.getScript('//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js?cache=' + startTime());
  
      ProductSearch();
+
+    
 
      $(document).ajaxStart(function () {
          $("#wait").css("display", "block");

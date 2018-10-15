@@ -518,7 +518,7 @@ font-family: 'Roboto';
                                 <center>
                                     <div class="button-base-wtw" id="button-wtw">
                                         <div id="slide-wbw"></div>
-                                        <a href="#">
+                                        <a class="NavigateBrands" value="Adventurer">
                                             <strong> Know More </strong>
                                             <i class="fa fa-chevron-circle-right"></i>
                                         </a>
@@ -630,7 +630,7 @@ font-family: 'Roboto';
                                 <center>
                                     <div class="button-base-bwb" id="button-bwb">
                                         <div id="slide-bbw"></div>
-                                        <a href="#">
+                                        <a class="NavigateBrands" value="Livinbox">
                                             <strong> Know More </strong>
                                             <i class="fa fa-chevron-circle-right"></i>
                                         </a>
@@ -736,7 +736,7 @@ font-family: 'Roboto';
                                 <center>
                                     <div class="button-base-bwb" id="button-bwb">
                                         <div id="slide-bbw"></div>
-                                        <a href="#">
+                                        <a class="NavigateBrands" value="Tombow">
                                             <strong> Know More </strong>
                                             <i class="fa fa-chevron-circle-right"></i>
                                         </a>
@@ -1054,6 +1054,58 @@ font-family: 'Roboto';
                 }
             });
         }());
+
+
+        $('.NavigateBrands').click(function () {
+       if ((window.location.pathname).includes("LandingPage.html") == false) {
+           window.location.href = "LandingPage.html";
+       }
+
+       localStorage.clear();
+       bread = [];
+bread = [{
+"link": "Home"
+}];
+       var crum = $(this).attr('value').split(" / ");
+    console.log(crum);
+       for (i = 0; i < crum.length; i++) {
+           bread.push({
+               "link": crum[i]
+           });
+
+       }
+
+       localStorage.setItem('bread', JSON.stringify(bread));
+
+       $("html,body").animate({
+           scrollTop: 440
+       }, 3000);
+
+
+
+
+       $('#Products').empty();
+
+       $(document).ajaxStart(function () {
+           $("#wait").css("display", "block");
+       });
+       $(document).ajaxComplete(function () {
+           $("#wait").css("display", "none");
+       });
+
+
+       $('#loading').css("display", "block");
+       setTimeout(function () {
+           $('#loading').css("display", "none");
+       }, 2000);
+
+       $('#brandAccordionAdventurer').load('LandingPage.html#brandAccordionAdventurer');
+       $('#Products').load('LandingPage.html#Products');
+
+       if (bread.length <= 2) {
+           $("#CategoryHeading").empty();
+       }
+   });
     </script>
 </body>
 
